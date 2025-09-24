@@ -61,7 +61,7 @@ Welcome endpoint:
 curl http://127.0.0.1:8000/
 
 Response:
-{"message": "👋 Welcome to the Translator API! Go to /docs for usage."}
+{"message":"Welcome to the Translator API! Go to /docs for usage. (=^-^=)"}
 
 
 Correct request:
