@@ -25,7 +25,7 @@ def root():
 )
 def translate(
     query: str = Query(..., min_length=1, description="The English word to translate e.g. `apple`"),
-    locale: str = Query(..., min_length=1, description="The target locale, e.g. `es-ES`, `fr-FR`, `de-DE`"),
+    locale: str = Query(..., min_length=1, description="The target locale, e.g. `es-ES`"),
     authorization: str = Header(None, description="Bearer token for authentication"),
 ):
     # Simple auth check
