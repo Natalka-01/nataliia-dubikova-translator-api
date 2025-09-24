@@ -31,6 +31,14 @@ def assert_json():
     def _assert_json(resp):
         content_type = resp.headers.get("Content-Type", "")
         assert content_type.startswith("application/json"), \
-            f"Expected JSON, got {content_type}"
+            f"Expected JSON, got {content_type}, body={resp.text}"
         return resp.json()
     return _assert_json
+
+@pytest.fixture
+def assert_status():
+    """Assert HTTP status with a helpful error message."""
+    def _assert_status(resp, expected_code: int):
+        assert resp.status_code == expected_code, \
+            f"Expected {expected_code}, got {resp.status_code}, body={resp.text}"
+    return _assert_status
