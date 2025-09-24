@@ -52,6 +52,7 @@ pytest -v
 Generate an HTML test report:
 pytest -v --html=report.html --self-contained-html
 
+A sample test report is available in docs/test-report.html
 
 Open report.html in your browser.
 
