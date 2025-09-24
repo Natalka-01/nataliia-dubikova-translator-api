@@ -28,7 +28,7 @@ def test_missing_params_returns_422(client, base_url, assert_json):
     resp = client.get(base_url + "translate")  # no query or locale
     assert resp.status_code == 422
     data = assert_json(resp)
-    assert "detail" in data  # FastAPI validation error format
+    assert "detail" in data  
 
 @pytest.mark.parametrize("query_variant", ["apple", "APPLE", "ApPlE", "  apple  "])
 def test_translate_is_case_insensitive(client, base_url, assert_json, query_variant):

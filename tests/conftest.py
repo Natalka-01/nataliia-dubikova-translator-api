@@ -12,10 +12,10 @@ def client():
     """Reusable HTTP client with a fake auth token in headers."""
     s = requests.Session()
 
-    # 🔹 Fake token (pretend we got it from /auth/login)
+    # Fake token 
     fake_token = "test-fake-jwt-token"
 
-    # 🔹 Add headers to every request made by this session
+    # Add headers to every request made by this session
     s.headers.update({
         "Authorization": f"Bearer {fake_token}",
         "Content-Type": "application/json"

@@ -1,14 +1,14 @@
 from fastapi import FastAPI, Query, Header
 from fastapi.responses import JSONResponse
 
-# App metadata shows in /docs and /redoc
+
 app = FastAPI(
     title="Simple Translator API",
     description="A tiny demo API that translates a few English words into other languages.",
     version="1.0.0",
 )
 
-# Simple fake dictionary
+
 translations = {
     ("apple", "es-ES"): "manzana"
 }
